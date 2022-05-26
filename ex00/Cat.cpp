@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anasr <anasr@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:52:10 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/26 17:09:15 by anasr            ###   ########.fr       */
+/*   Updated: 2022/05/26 08:09:34 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat()
 	type = "Cat";
 }
 
-Cat::Cat(const Cat& original) : Animal(original)
+Cat::Cat(const Cat& original) : Animal()
 {
 	std::cout << "Cat: Copy constructor is called\n";
 	type = original.type;

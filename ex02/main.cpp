@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:05:08 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/27 14:02:20 by ann              ###   ########.fr       */
+/*   Updated: 2022/05/26 08:42:12 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int main()
 	
 	// Animal *a2 = new Animal();
 
-	/* it shows an error since there exists a pure virtual function with no  */
-	/* definition in the base class. However, instantiating derived classes  */
-	/* works fine as all functions are defined.                              */
+	/* it shows an error since there exists a pure virtual function with no */
+	/* definition in the base class. However, instantiating derived classes */
+	/* works fine as all functions are defined.                             */
 
 	Animal *c = new Cat();
 	Animal *d = new Dog();

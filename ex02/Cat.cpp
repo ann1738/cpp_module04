@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:52:10 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/27 13:16:38 by ann              ###   ########.fr       */
+/*   Updated: 2022/05/26 08:40:54 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat()
 	my_brain = new Brain;
 }
 
-Cat::Cat(const Cat& original) : Animal(original)
+Cat::Cat(const Cat& original) : Animal()
 {
 	std::cout << "Cat: Copy constructor is called\n";
 	my_brain = new Brain(*original.my_brain);

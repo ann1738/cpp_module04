@@ -6,14 +6,14 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:05:08 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/27 13:42:30 by ann              ###   ########.fr       */
+/*   Updated: 2022/05/26 08:38:26 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-# define ARRAY_SIZE 2
+# define ARRAY_SIZE 100
 
 int main()
 {
@@ -31,20 +31,21 @@ int main()
 	}
 	{
 		std::cout << "\n\e[96m*** TEST 2: does the program do deep copy?***\e[0m\n";
-		
-		// Animal *a1 = new Dog();
-		// a1->setIdea(0, "hey this is an idea!");
 		Dog a1;
 		a1.setIdea("hey this is an idea!", 0);
+		a1.setIdea("this is my second idea!", 1);
 		Dog a2(a1);
 		a2.setIdea("Another idea!", 0);
-		std::cout << "\e[95ma1's idea is \"" << a1.getIdea(0) << "\", and a2's idea is \"" << a2.getIdea(0) << "\"\e[0m\n";
+		std::cout << "\e[95ma1's first idea is \"" << a1.getIdea(0) << "\", and a2's first idea is \"" << a2.getIdea(0) << "\"\e[0m\n";
+		std::cout << "\e[95ma1's second idea is \"" << a1.getIdea(1) << "\", and a2's second idea is \"" << a2.getIdea(1) << "\"\e[0m\n";
 
 		Cat c1;
 		c1.setIdea("hey this is an idea!", 0);
+		c1.setIdea("this is my second idea!", 1);
 		Cat c2 = c1;
 		c2.setIdea("Another idea!", 0);
-		std::cout << "\e[95mc1's idea is \"" << c1.getIdea(0) << "\", and c2's idea is \"" << c2.getIdea(0) << "\"\e[0m\n";
+		std::cout << "\e[95mc1's first idea is \"" << c1.getIdea(0) << "\", and c2's first idea is \"" << c2.getIdea(0) << "\"\e[0m\n";
+		std::cout << "\e[95mc1's second idea is \"" << c1.getIdea(1) << "\", and c2's second idea is \"" << c2.getIdea(1) << "\"\e[0m\n";
 	}
 	{
 		std::cout << "\n\e[96m*** TEST 3: subject file leak test***\e[0m\n";

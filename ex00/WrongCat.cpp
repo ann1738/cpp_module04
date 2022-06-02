@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:52:10 by anasr             #+#    #+#             */
-/*   Updated: 2022/05/26 08:09:57 by ann              ###   ########.fr       */
+/*   Updated: 2022/06/02 10:57:30 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ WrongCat::WrongCat(const WrongCat& original) : WrongAnimal()
 WrongCat& WrongCat::operator=(const WrongCat& original)
 {
 	std::cout << "WrongCat: Copy assignment overloading constructor is called\n";
-	type = original.type;
+	if (this != &original)
+		type = original.type;
 	return (*this);
 }
 

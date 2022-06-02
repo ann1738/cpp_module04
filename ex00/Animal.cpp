@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anasr <anasr@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:41:22 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/26 16:59:31 by anasr            ###   ########.fr       */
+/*   Updated: 2022/06/02 10:56:50 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ Animal::Animal(const Animal& original) : type(original.type)
 Animal& Animal::operator=(const Animal& original)
 {
 	std::cout << "Animal: Copy assignment overloading constructor is called\n";
-	type = original.type;
+	if (this != &original)
+		type = original.type;
 	return (*this);
 }
 

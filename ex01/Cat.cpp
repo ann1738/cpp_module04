@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:52:10 by anasr             #+#    #+#             */
-/*   Updated: 2022/05/26 08:24:35 by ann              ###   ########.fr       */
+/*   Updated: 2022/06/02 11:01:21 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ Cat::Cat(const Cat& original) : Animal()
 Cat& Cat::operator=(const Cat& original)
 {
 	std::cout << "Cat: Copy assignment overloading constructor is called\n";
-	my_brain = new Brain(*original.my_brain);
-	type = original.type;
+	if (this != &original)
+	{
+		my_brain = new Brain(*original.my_brain);
+		type = original.type;
+	}
 	return (*this);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anasr <anasr@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:41:22 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/26 17:16:18 by anasr            ###   ########.fr       */
+/*   Updated: 2022/06/02 10:57:23 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ WrongAnimal::WrongAnimal(const WrongAnimal& original) : type(original.type)
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& original)
 {
 	std::cout << "WrongAnimal: Copy assignment overloading constructor is called\n";
-	type = original.type;
+	if (this != &original)
+		type = original.type;
 	return (*this);
 }
 

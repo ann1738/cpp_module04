@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:05:08 by anasr             #+#    #+#             */
-/*   Updated: 2022/05/26 08:08:43 by ann              ###   ########.fr       */
+/*   Updated: 2022/06/02 11:09:18 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
-void	print_sound(const Animal *an)
+static void	print_sound(const Animal *an)
 {
 	an->makeSound();
 }
@@ -66,7 +66,5 @@ int main()
 		delete a_dog;
 		delete a_animal;
 	}
-	
 	std::cout << "\n\e[94m*** END OF TESTS ***\e[0m\n";
-
 }

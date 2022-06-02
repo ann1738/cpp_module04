@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:52:07 by anasr             #+#    #+#             */
-/*   Updated: 2022/05/26 08:41:04 by ann              ###   ########.fr       */
+/*   Updated: 2022/06/02 11:04:12 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ Dog::Dog(const Dog& original) : Animal()
 Dog& Dog::operator=(const Dog& original)
 {
 	std::cout << "Dog: Copy assignment overloading constructor is called\n";
-	my_brain = new Brain(*original.my_brain);
-	type = original.type;
+	if (this != &original)
+	{
+		my_brain = new Brain(*original.my_brain);
+		type = original.type;
+	}
 	return (*this);
 }
 

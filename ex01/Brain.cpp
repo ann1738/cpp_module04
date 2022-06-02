@@ -6,7 +6,7 @@
 /*   By: ann <ann@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:42:49 by anasr             #+#    #+#             */
-/*   Updated: 2022/04/27 13:31:24 by ann              ###   ########.fr       */
+/*   Updated: 2022/06/02 11:01:04 by ann              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ Brain::Brain(const Brain& original)
 Brain& Brain::operator=(const Brain& original)
 {
 	std::cout << "Brain: Copy assignment overloading constructor is called\n";
-	for (int i = 0; i < 100; i++)
-		ideas[i] = original.ideas[i];
+	if (this != &original)
+	{
+		for (int i = 0; i < 100; i++)
+			ideas[i] = original.ideas[i];
+	}
 	return (*this);
 }
 
